@@ -1,0 +1,63 @@
+// Sprites
+$tw-name: 'tw';
+$tw-x: 0px;
+$tw-y: 0px;
+$tw-offset-x: 0px;
+$tw-offset-y: 0px;
+$tw-width: 47px;
+$tw-height: 47px;
+$tw-total-width: 114px;
+$tw-total-height: 47px;
+$tw-image: 'sprite.png';
+$tw: (0px, 0px, 0px, 0px, 47px, 47px, 114px, 47px, 'sprite.png', 'tw', );
+$vk-name: 'vk';
+$vk-x: 67px;
+$vk-y: 0px;
+$vk-offset-x: -67px;
+$vk-offset-y: 0px;
+$vk-width: 47px;
+$vk-height: 47px;
+$vk-total-width: 114px;
+$vk-total-height: 47px;
+$vk-image: 'sprite.png';
+$vk: (67px, 0px, -67px, 0px, 47px, 47px, 114px, 47px, 'sprite.png', 'vk', );
+$spritesheet-width: 114px;
+$spritesheet-height: 47px;
+$spritesheet-image: 'sprite.png';
+$spritesheet-sprites: ($tw, $vk, );
+$spritesheet: (114px, 47px, 'sprite.png', $spritesheet-sprites, );
+
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(../img/#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
