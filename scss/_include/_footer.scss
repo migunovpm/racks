@@ -1,1 +1,36 @@
 /* Footer */
+footer {
+	.button_wrap {
+		margin-top: 30px;
+		text-align: center;
+	}
+	h2 {
+		color: #000;
+	}
+	p {
+		font-size: 18px;
+		text-align: center;
+		margin-top: 0;
+	}
+}
+
+.bottom_phone {
+	text-align: center;
+	margin-top: 50px;
+	color: $red-color;
+}
+
+.hidden {
+	display: none;
+}
+
+.hidden_form,
+.form_back {
+	max-width: 420px;
+	margin: auto;
+	position: relative;
+	h2 {
+		text-align: center;
+		font-weight: normal;
+	}	
+}

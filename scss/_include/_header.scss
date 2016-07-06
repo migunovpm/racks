@@ -1,1 +1,145 @@
 /* Header */
+header {
+	min-height: 640px;
+	background-image: url("../img/top_bg.jpg");
+	background-position: top center;
+	background-size: cover;
+	color: #fff;
+	padding-top: 32px;
+	padding-bottom: 40px;
+}
+
+.logo {
+	font-size: 40px;
+	font-family: 'RobotoBold', sans-serif;
+}
+
+.top_phone,
+.bottom_phone {
+	text-align: right;
+}
+
+.top_phone,
+.bottom_phone {
+	.tab {
+		cursor: pointer;
+	}
+	.wrap_tabs {
+		.tab {
+			text-transform: uppercase;
+			cursor: pointer;
+		}
+	}
+}
+.top_phone,
+.bottom_phone {
+	.wrap_tabs {
+		.active { 
+			text-decoration: underline; 
+		}
+	}
+} 
+.top_phone,
+.bottom_phone {
+	.tab_item {
+		display: none;
+		font-size: 34px;
+		font-family: 'RobotoBold', sans-serif;
+	}
+}
+
+.tab_item {
+	display: none;
+}
+.tab_item:first-child {
+	display: block;
+}
+
+.top_header {
+	margin-top: 70px;
+	@include clearfix;
+	h2 {
+		margin: 10px 0 0;
+		font-family: 'CleanvertisingLight', sans-serif;
+		font-size: 36px;
+	}
+}
+
+.tabs_header {
+	margin-top: 50px;
+	@include clearfix;
+	li {
+		position: relative;
+		padding-left: 40px;
+		padding-right: 5px;
+		margin-bottom: 20px;
+		font-family: 'RobotoBold', sans-serif;
+	}
+		i {
+			position: absolute;
+			left: 0;
+			top: 0;
+			line-height: 26px;
+		}
+	.tabs {
+		text-align: left;
+		@include clearfix;
+		span {
+			display: inline-block;
+			background-color: rgba(255,255,255,.25);
+			padding: 15px 18px;
+			text-transform: uppercase;
+			cursor: pointer;
+			float: left;
+			font-family: 'RobotoBold', sans-serif;
+			transition: all .25s ease;
+				&.active {
+					background-color: rgba(255,255,255,.6);
+					color: #000;
+				}
+			}
+		}
+	}
+
+.tabs_header .tab_content {
+	background-color: rgba(255,255,255,.6);
+	padding: 18px 18px 16px;
+	color: #000;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+
+.button {
+	border: none;
+	cursor: pointer;
+	display: inline-block;
+	height: 46px;
+	line-height: 46px;
+	padding: 0 32px;
+	background-color: #000;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	border-radius: 3px;
+	font-size: 16px;
+	font-family: 'RobotoBold', sans-serif;
+	&.btn_red {
+		background-color: $red_color;
+	}
+	&.btn_green {
+		background-color: $green-color;
+	}
+	&.btn_white {
+		background-color: #fff;
+		color: #000;
+	}
+}
+
+.button_wrap {
+	text-align: right;
+}
+
+a.button {
+	color: #fff;
+	text-decoration: none;
+}

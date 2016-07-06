@@ -1,24 +1,30 @@
 doctype html
 html(lang='ru-RU')
 	head
+		meta(name="msvalidate.01" content="721635FA3C91BFE6821535169BF4D3B4")
 		meta(charset='UTF-8')
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		title
 			block title
 		//- SEO
-		meta(name='description' content="")
-		meta(name="keywords" content="")
+		meta(name='description' content="Монтаж металлических стеллажей, металлические стеллажи, монтаж стеллажей любой сложности, демонтаж стеллажей")
+		meta(name="keywords" content="монтаж стеллажей, демонтаж стеллажей, металлические стеллажи, стеллажи для складов, универсальные стеллажи, монтаж стеллажей по всей России")
 		meta(name="author" content="Pavel Migunov")
 		//- FAVICON
-		link(rel="shortcut icon" href="favicon.png")
+		link(rel="shortcut icon" href="favicon.ico")
 		//- BOWER CSS
 		//build:css css/vendor.min.css
 		link(rel="stylesheet" type="text/css" href="libs/normalize-css/normalize.css")
+		link(rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css")
+		link(rel="stylesheet" type="text/css" href="libs/animate/animate.min.css")
+		link(rel="stylesheet" type="text/css" href="libs/popup/magnific-popup.css")
 		//endbuild
 		//- FONTS
 		//build:css css/fonts.min.css
 		link(rel="stylesheet" type="text/css" href="css/myfont.css")
+		link(rel="stylesheet" type="text/css" href="libs/owl/assets/owl.carousel.css")
+		link(rel="stylesheet" type="text/css" href="css/fonts.css")
 		//endbuild
 		//- CSS
 		//build:css css/main.min.css
@@ -30,19 +36,42 @@ html(lang='ru-RU')
 		//endbuild
 		
 	body
-		<!--[if lt IE 8]>
-		<p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста, <a href="http://browsehappy.com">обновите</a>его.</p>
-		<![endif]-->
+		// Rating@Mail.ru counter
+		script(type="text/javascript").
+			var _tmr = window._tmr || (window._tmr = []);
+			_tmr.push({id: "2792806", type: "pageView", start: (new Date()).getTime()});
+			(function (d, w, id) {
+			  if (d.getElementById(id)) return;
+			  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+			  ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+			  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+			  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+			})(document, window, "topmailru-code");
+		noscript
+			div(style="position:absolute;left:-10000px;")
+				img(src="//top-fwz1.mail.ru/counter?id=2792806;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru")
+		// //Rating@Mail.ru counter
 
 		.wrapper
 			include _include/_header
 
-			block content
+			include _include/_s_tizers
 
-		include _include/_footer
-		
+			include _include/_s_profi
+
+			include _include/_s_rewview
+
+			include _include/_contacts
+
+			include _include/_footer
+
 		//build:js js/vendor.min.js
 		script(src='libs/jquery/dist/jquery.min.js')
+		script(src='libs/stellar/jquery.stellar.min.js')
+		script(src='libs/owl/owl.carousel.min.js')
+		script(src='libs/waypoints/waypoints.min.js')
+		script(src='libs/animate/animate-css.js')
+		script(src='libs/popup/jquery.magnific-popup.min.js')
 		//endbuild
 		
 		//build:js js/common.min.js

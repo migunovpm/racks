@@ -1,0 +1,67 @@
+// Profi
+.profi_item {
+	margin-bottom: 30px;
+	@include clearfix;
+}
+.profi_left {
+	color: $red-color;
+	i {
+		font-size: 100px;
+		line-height: 110px;
+	}
+}
+
+.profi_right {
+	h3 {
+		display: inline-block;
+		margin: 0;
+		color: $red-color;
+		font-size: 28px;
+	}
+	p {
+		margin-top: 5px;
+	}
+}
+
+form {
+	background-color: #F7F7F7;
+	padding: 25px 30px;
+	border: $green-color 5px solid;
+	border-radius: 5px;
+	h2 {
+		text-transform: uppercase;
+		margin-top: 0;
+		font-family: 'RobotoBold', sans-serif;
+		font-size: 22px;
+		color: $text-color;
+		line-height: 22px;
+		margin-bottom: 30px;
+	}
+	label {
+		display: block;
+		margin-bottom: 15px;
+		font-size: 14px;
+		color: #666;
+	}
+	input {
+		display: block;
+		line-height: 40px;
+		height: 40px;
+		border: #D9D9D9 1px solid;
+		box-shadow: 0 0 20px rgba(0,0,0,.06) inset;
+		width: 100%;
+		text-indent: 10px;
+		font-size: 20px;
+		margin-top: 5px;
+		margin-top: 3px;
+		&:focus {
+			box-shadow: $green-color 0 0 0 2px;
+			border-radius: 3px;
+			border-color: $green-color;
+		}
+	}
+	.button_wrap {
+		text-align: center;
+		margin: 30px 0 10px;
+	}
+}

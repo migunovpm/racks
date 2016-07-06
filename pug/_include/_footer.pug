@@ -1,2 +1,39 @@
 // Footer
-footer.footer
+footer
+	.container
+		.row
+			.col-md-12
+				h2 Остались вопросы?
+				p Наш специалист ответит на любой Ваш вопрос
+				.bottom_phone
+						.wrap_tabs
+							.tabs
+								span.tab Чебоксары
+								|	/ 
+								span.tab Москва
+							.tab_content
+								.tab_item +7 (951) 999-91-11
+								.tab_item +7 (888) 888-88-88
+				.button_wrap
+					a(href=".form_back").button.btn_red.popup_c Заказать звонок
+.hidden
+	form.hidden_form#feedb-form
+		h2 Связаться с нами
+		label
+			span Ваше имя:
+			input(type="text" name="nameFF" required)
+		label
+			span Ваш телефон:
+			input(type="tel" name="contactFF" required)
+		.button_wrap
+			button(type="submit").button.btn_green Отправить заявку
+	form.form_back#feedbk-form
+		h2 Связаться с нами
+		label
+			span Ваше имя:
+			input(type="text" name="nameFF" required)
+		label
+			span Ваш телефон:
+			input(type="tel" name="contactFF" required)
+		.button_wrap
+			button(type="submit").button.btn_green Отправить заявку

@@ -1,0 +1,82 @@
+// Rewview
+.s_rewview {
+	background-image: url(../img/middle_bg.jpg);
+	background-attachment: fixed;
+	min-height: 500px;
+	background-position: top center;
+	background-size: cover;
+	background-color: #24201E;
+}
+
+.review_item {
+	color: #fff;
+	text-align: center;
+	h4 {
+		font-family: "Times New Roman", sans-serif;
+		font-style: italic;
+		font-size: 22px;
+		font-weight: normal;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	p {
+		float: none;
+		margin: 30px auto 0;
+		display: inline-block;
+		font-size: 15px;
+	}
+	.image_wrap {
+		text-align: center;
+		img {
+			display: inline-block;
+			width: 165px;
+			height: 165px;
+			border-radius: 50%;
+			border: #585A5B 10px solid;
+		}
+	}
+}
+
+.hr {
+	width: 80px;
+	height: 1px;
+	background-color: #CEA380;
+	margin: 0 auto;
+}
+
+.owl-nav {
+	div {
+		width: 37px;
+		height: 140px;
+		background-image: url("../img/s_arrows.png");
+		top: 20px;
+		position: absolute;
+		opacity: .6;
+		&:hover {
+			opacity: 1;
+		}
+		&.owl-next {
+			right: 0;
+			background-position: top right;
+		}
+	}
+}
+
+.owl-dots {
+	width: 100%;
+	margin-top: 20px;
+	text-align: center;
+	.owl-dot {
+		width: 14px;
+		height: 14px;
+		background-color: #fff;
+		display: inline-block;
+		margin: 0 4px;
+		border-radius: 50%;
+		opacity: .5;
+		&.active {
+			opacity: .8;
+		}
+	}
+}

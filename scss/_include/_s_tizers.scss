@@ -1,0 +1,84 @@
+/* Tizers */
+.s_tizers {
+	background: rgb(198,216,238); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(198,216,238,1) 1%, rgba(232,239,247,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(198,216,238,1) 1%,rgba(232,239,247,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(198,216,238,1) 1%,rgba(232,239,247,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c6d8ee', endColorstr='#e8eff7',GradientType=0 ); /* IE6-9 */
+	color: $blue-color;
+	font-family: 'CleanvertisingLight', sans-serif;
+	text-transform: uppercase;
+	padding: 35px 0 0;
+	span {
+		display: block;
+		font-size: 18px;
+		line-height: 24px;
+	}
+	strong {
+		display: block;
+		font-weight: normal;
+		font-size: 20px;
+	}
+	.row {
+		> div {
+			margin-bottom: 35px;
+		}
+	}
+}
+
+.tiz_img,
+.tiz_descr {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.tiz_img i {
+	font-size: 70px;
+	line-height: 48px;
+	margin-right: 5px;
+}
+
+.s_tizers .row {
+	> div:nth-child(1) {
+		strong {
+			font-size: 20px;
+			line-height: 35px;
+		}
+		span {
+			font-size: 18px;
+			line-height: 18px;
+		}
+	}
+	> div:nth-child(2) {
+		strong {
+			font-size: 20px;
+			line-height: 31px;
+		}
+		span {
+			font-size: 18px;
+			line-height: 20px;
+		}
+		i {
+			position: relative;
+			bottom: -3px;
+			line-height: 41px;
+		}
+	}
+	> div:nth-child(3) {
+		strong {
+			line-height: 37px;
+		}
+		span {
+			line-height: 14px;
+		}
+	}
+	> div:nth-child(4) {
+		span {
+			font-size: 18px;
+			line-height: 14px;
+		}
+		strong {
+			line-height: 36px;
+		}
+	}
+}

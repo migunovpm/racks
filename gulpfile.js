@@ -76,7 +76,7 @@ gulp.task('sprite', function () {
 
 /* -------- fonts to prod  -------- */
 gulp.task('fonts', function() {
-  gulp.src('app/fonts/*')
+  gulp.src('app/fonts/**/*')
     .pipe(gulp.dest('prod/fonts'));
 });
 
@@ -127,7 +127,7 @@ gulp.task('clean', function() {
 });
 
 /* -------- clean cache  -------- */
-gulp.task('clear', function() {
+gulp.task('clear1', function() {
   return cache.clearAll();
 });
 
