@@ -16,15 +16,6 @@ $(function() {
 		navText : ""
 	});
 
-	function wResize() {
-		$("header").css("min-height", $(window).height());
-	};
-	wResize();
-
-	$(window).resize(function() {
-		wResize();
-	});
-
 	$(".top_phone .tab_item").not(":first").hide();
 	$(".top_phone .wrap_tabs .tab").click(function() {
 		$(".top_phone .wrap_tabs .tab").removeClass("active").eq($(this).index()).addClass("active");
@@ -70,14 +61,6 @@ $(function() {
 
 });
 
-$(window).load(function() {
-	$(".top_header h1").animated("fadeInDown", "fadeInDown");
-	$(".top_header h2").animated("fadeInUp", "fadeInUp");
-	$(".tabs_header .wrap_tabs").animated("flipInY", "fadeOut");
-	$(".profi_item").animated("fadeInRight", "fadeOut");
-	$(".s_profi form").animated("zoomInRight", "fadeOut");
-	$("footer").animated("fadeInUp", "fadeOut");
-});
 
 $(document).ready(function() {
 
