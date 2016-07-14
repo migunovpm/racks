@@ -1,5 +1,24 @@
 $(function() {
 
+	window.onload= function() {
+	document.getElementById('toggler').onclick = function() {
+		openbox('city_wrap', this);
+		return false;
+	};
+};
+function openbox(id, toggler) {
+	var div = document.getElementById(id);
+	if(div.style.display == 'block') {
+		div.style.display = 'none';
+		toggler.innerHTML = 'Открыть весь список городов';
+	}
+	else {
+		div.style.display = 'block';
+		toggler.innerHTML = 'Закрыть весь список городов';
+	}
+}
+
+
 	$.stellar({
 		responsive: true,
 		horizontalOffset: 60
@@ -64,6 +83,29 @@ $(function() {
 
 $(document).ready(function() {
 
+$('#open-close').show();
+$('#block-links').hide();
+
+$('#open-close').click(function(event) {
+  event.preventDefault(); // Для того чтобы при нажатии на ссылку не кидало вверх
+  $('#block-links').slideToggle();
+});
+
+// Плавный скролл по якорям
+$('a[href^="#"]').on('click', function(e){
+        e.preventDefault();
+
+        var
+          $this = $(this),
+          target = $this.attr('href'),
+          strip = target.slice(1),
+          anchor = $("[id='"+ strip +"']");
+
+        $('html, body').animate({
+                scrollTop: anchor.offset().top
+        }, 1000);
+ });
+
 	$(".popup_c").magnificPopup();
 
 //Цели для Яндекс.Метрики и Google Analytics
@@ -87,7 +129,7 @@ document.getElementById('feedback-form').addEventListener('submit', function(evt
   evt.preventDefault();
   http.open("POST", "contacts.php", true);
   http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  http.send("nameFF=" + f.nameFF.value + "&contactFF=" + f.contactFF.value);
+  http.send("nameFF=" + f.nameFF.value + "&contactFF=" + f.contactFF.value + "&messageFF=" + f.messageFF.value);
   http.onreadystatechange = function() {
     if (http.readyState == 4 && http.status == 200) {
       alert(http.responseText + ', Ваше сообщение получено.\nНаши специалисты ответят Вам в ближайшее время!');
@@ -95,6 +137,8 @@ document.getElementById('feedback-form').addEventListener('submit', function(evt
       f.nameFF.value='';
       f.contactFF.removeAttribute('value'); // очистить поле сообщения (две строки)
       f.contactFF.value='';
+      f.messageFF.removeAttribute('value'); // очистить поле сообщения (две строки)
+      f.messageFF.value='';
     }
   }
   http.onerror = function() {
@@ -107,7 +151,7 @@ document.getElementById('feedb-form').addEventListener('submit', function(evt){
   evt.preventDefault();
   http.open("POST", "contacts.php", true);
   http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  http.send("nameFF=" + f.nameFF.value + "&contactFF=" + f.contactFF.value);
+  http.send("nameFF=" + f.nameFF.value + "&contactFF=" + f.contactFF.value + "&messageFF=" + f.messageFF.value);
   http.onreadystatechange = function() {
     if (http.readyState == 4 && http.status == 200) {
     	var magnificPopup = $.magnificPopup.instance;
@@ -117,6 +161,8 @@ document.getElementById('feedb-form').addEventListener('submit', function(evt){
       f.nameFF.value='';
       f.contactFF.removeAttribute('value'); // очистить поле сообщения (две строки)
       f.contactFF.value='';
+      f.messageFF.removeAttribute('value'); // очистить поле сообщения (две строки)
+      f.messageFF.value='';
     }
   }
   http.onerror = function() {
@@ -129,7 +175,7 @@ document.getElementById('feedbk-form').addEventListener('submit', function(evt){
   evt.preventDefault();
   http.open("POST", "contacts.php", true);
   http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  http.send("nameFF=" + f.nameFF.value + "&contactFF=" + f.contactFF.value);
+  http.send("nameFF=" + f.nameFF.value + "&contactFF=" + f.contactFF.value + "&messageFF=" + f.messageFF.value);
   http.onreadystatechange = function() {
     if (http.readyState == 4 && http.status == 200) {
     	var magnificPopup = $.magnificPopup.instance;
@@ -139,6 +185,8 @@ document.getElementById('feedbk-form').addEventListener('submit', function(evt){
       f.nameFF.value='';
       f.contactFF.removeAttribute('value'); // очистить поле сообщения (две строки)
       f.contactFF.value='';
+      f.messageFF.removeAttribute('value'); // очистить поле сообщения (две строки)
+      f.messageFF.value='';
     }
   }
   http.onerror = function() {

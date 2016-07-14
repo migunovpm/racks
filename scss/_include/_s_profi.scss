@@ -20,6 +20,15 @@
 	}
 	p {
 		margin-top: 5px;
+		margin-bottom: 10px;
+	}
+	ul {
+		list-style: disc;
+		margin-left: 30px;
+		margin-bottom: 10px;
+		li {
+			margin-bottom: 5px;
+		}
 	}
 }
 
@@ -64,4 +73,24 @@ form {
 		text-align: center;
 		margin: 30px 0 10px;
 	}
+	textarea {
+		display: block;
+		line-height: 30px;
+		border: #D9D9D9 1px solid;
+		box-shadow: 0 0 20px rgba(0,0,0,.06) inset;
+		width: 100%;
+		text-indent: 10px;
+		font-size: 18px;
+		margin-top: 5px;
+		margin-top: 3px;
+		resize: none;
+		&:focus {
+			box-shadow: $green-color 0 0 0 2px;
+			border-radius: 3px;
+			border-color: $green-color;
+		}
+	}
+}
+.add_services {
+	display: none;
 }

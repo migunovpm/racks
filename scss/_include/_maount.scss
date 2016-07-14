@@ -1,0 +1,27 @@
+/* Maount */
+.maount {
+	font-size: 18px;
+	border-top: 1px solid #ccc;
+	.sec_img {
+		text-align: center;
+	}
+	ul {
+		li {
+			text-align: left;
+			margin-bottom: 15px;
+		}
+	}
+	.maount_head {
+		margin-bottom: 40px;
+		@include clearfix;
+	}
+	.maount_img {
+		margin: 0 auto;
+		margin-bottom: 20px;
+		width: 160px;
+		height: 160px;
+		border-radius: 50%;
+		border: 5px solid $blue-color;
+		overflow: hidden;
+	}
+}

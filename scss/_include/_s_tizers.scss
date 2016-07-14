@@ -9,6 +9,14 @@
 	font-family: 'CleanvertisingLight', sans-serif;
 	text-transform: uppercase;
 	padding: 35px 0 0;
+	a {
+		color: $blue-color;
+		font-family: 'CleanvertisingLight', sans-serif;
+		text-transform: uppercase;
+		&:hover {
+			color: #416b97;
+		}
+	}
 	span {
 		display: block;
 		font-size: 18px;

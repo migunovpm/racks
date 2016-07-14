@@ -1,0 +1,25 @@
+
+/* Types */
+.addition h3 {
+	font-size: 18px;
+	font-weight: 600;
+}
+.addition ul {
+	list-style: disc;
+	margin-left: 20px;
+}
+.addition h4 {
+	margin-top: 0;
+}
+.type_wrap {
+	margin-top: 40px;
+	.img_type_wrap {
+		margin: 0 auto;
+		margin-bottom: 40px;
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		border: 5px solid #003469;
+		overflow: hidden;
+	}
+}

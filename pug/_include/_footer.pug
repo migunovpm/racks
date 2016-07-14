@@ -12,10 +12,38 @@ footer
 								|	/ 
 								span.tab Москва
 							.tab_content
-								.tab_item +7 (951) 999-91-11
+								.tab_item
+									.tab_tel +7 (951) 999-91-11
+									.tab_tel +7 (937) 394-25-11
 								.tab_item +7 (888) 888-88-88
 				.button_wrap
 					a(href=".form_back").button.btn_red.popup_c Заказать звонок
+				p Общество с ограниченной ответственностью "РАКС-МОНТАЖ"
+				.col-md-12
+					ul
+						li 
+							span ИНН: 
+							| 2130173833
+						li 
+							span КПП: 
+							| 213001001
+						li 
+							span ОГРН: 
+							| 1162130060058
+						li 
+							span ОКПО: 
+							| 03060379
+						li 
+							span Юридический адрес: 
+							| 428011, Чувашская Респ - Чувашия, Чебоксары г, Новогородская ул, дом № 18, квартира 114
+						li 
+							span Телефон: 
+							| +7(937)3942511
+						li 
+							span Генеральный директор: 
+							| Пожаров Марс Минерович
+
+
 .hidden
 	form.hidden_form#feedb-form
 		h2 Связаться с нами
@@ -25,6 +53,9 @@ footer
 		label
 			span Ваш телефон:
 			input(type="tel" name="contactFF" required)
+		label
+			span Ваш вопрос:
+			textarea(name="messageFF", required rows="3")
 		.button_wrap
 			button(type="submit").button.btn_green Отправить заявку
 	form.form_back#feedbk-form
@@ -35,5 +66,8 @@ footer
 		label
 			span Ваш телефон:
 			input(type="tel" name="contactFF" required)
+		label
+			span Ваш вопрос:
+			textarea(name="messageFF", required rows="3")
 		.button_wrap
 			button(type="submit").button.btn_green Отправить заявку

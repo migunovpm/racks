@@ -3,6 +3,7 @@ footer {
 	.button_wrap {
 		margin-top: 30px;
 		text-align: center;
+		margin-bottom: 40px;
 	}
 	h2 {
 		color: #000;
@@ -11,6 +12,14 @@ footer {
 		font-size: 18px;
 		text-align: center;
 		margin-top: 0;
+	}
+	ul {
+		li {
+			text-align: center;
+			span {
+				font-weight: 600;
+			}
+		}
 	}
 }
 
